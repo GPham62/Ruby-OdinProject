@@ -1,29 +1,14 @@
-def doUntilFalse firstInput, someProc
-  input  = firstInput
-  output = firstInput
-
-  while output
-    input  = output
-    output = someProc.call input
-  end
-
-  input
-end
-
-buildArrayOfSquares = Proc.new do |array|
-  lastNumber = array.last
-  if lastNumber <= 0
-    false
-  else
-    array.pop                         # Take off the last number...
-    array.push lastNumber*lastNumber  # ...and replace it with its square...
-    array.push lastNumber-1           # ...followed by the next smaller number.
+class Person
+  attr_reader :name
+  attr_accessor  :job
+  
+  def initialize(name, job)
+    @name = name
+    @job = job
   end
 end
 
-alwaysFalse = Proc.new do |justIgnoreMe|
-  false
-end
+person = Person.new("Pham Van A", "none")
 
-puts doUntilFalse([5], buildArrayOfSquares).inspect
-puts doUntilFalse('I\'m writing this at 3:00 am; someone knock me out!', alwaysFalse)
+person.job = "IT"
+puts person.job
