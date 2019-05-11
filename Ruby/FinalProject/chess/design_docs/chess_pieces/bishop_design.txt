@@ -1,0 +1,5 @@
+Bishop
+- move offsets: [[1, 1], [1, -1], [-1, -1], [-1, 1]]
+- moves:
+    - can move any number of spaces in one offset direction
+    - cannot move over another piece

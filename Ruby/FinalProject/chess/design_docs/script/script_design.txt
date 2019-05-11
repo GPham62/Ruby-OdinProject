@@ -1,0 +1,32 @@
+**How will the chess game be played?**
+
+- Display the title screen
+- Print the title screen options
+- Get the user's choice of how to proceed from the title screen.
+  - If a new game is started
+    - print the game instructions
+    - Set up
+      - Make a new game
+      - Set up the game board
+  - If a game is loaded
+    - If there are games saved, load the save game
+    - If there are no games saved, tell the user and go through the title screen options again
+  - If the user wants to quit, just exit the program
+- Run the game
+  - print the board
+  - print the turn number and which color gets to make a move
+  - play a turn:
+    - print the options a player can choose from on their turn
+    - if the player would like to move a chess piece (most likely outcome)
+      - prompt the player to choose the chess piece to move 
+        - should be in the form of coordinates on the chess board ('a2')
+        - follow steps in movement_design.txt
+      - Check mate? 
+        - after a move has been made, all of the current color's moves must be calculated
+        - the opposite player's kings moves must be calculated. If all the king's moves are included
+          in the current color's calculated moves, check mate is acheived.
+        - declare check mate, print the winner of the game, and return to title screen.
+      - increment the turn counter after a move has been made
+      - switch colors
+      - return the game and run again
+    

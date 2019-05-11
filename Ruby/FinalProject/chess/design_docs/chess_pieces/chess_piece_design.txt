@@ -1,0 +1,18 @@
+Plan on creating a chess_piece parent class to store similar features of all the types of pieces.
+Then plan on creating child classes for each individual type of chess piece to store the differences.
+- all chess pieces have similarities that can be built into a parent class
+    - all chess pieces have a representation that will be a unicode character chosen from an array
+      held in the parent class
+    - all chess pieces have a color. Though the representation will already be colored, the color
+      may be used for validation when a player chooses a piece to move on their turn.
+        - color can be initialized in parent, then super can be called in the child class and set
+          with an attr_accessor
+        - possible this feature may not be necessary to include in the parent
+    - all game pieces can move, but each game piece has a different type of move
+        - want to make an array in the parrent that holds all the possible offsets, then pick from
+          that array in the child
+    - all game pieces need to check if another game piece is in the way of their move to when considering
+      legal moves
+        - only exception is knight
+    - all game pieces can capture
+        - only pawn and king have special mechanics for capture

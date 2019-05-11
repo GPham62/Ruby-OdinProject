@@ -1,0 +1,8 @@
+- board has a state
+    - state will be modeled as an array of 8 'file' arrays. One for each file on a chess board.
+    - each file will be length 8, populated with nil upon initialization
+- board needs a way to display its state
+    - to_s method
+- need to be able to get information about spaces on the board with coordinates
+- need to be able to update the state of the board
+    - ex: pawn at a2 moves to a4

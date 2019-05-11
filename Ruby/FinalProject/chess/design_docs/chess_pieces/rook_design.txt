@@ -1,0 +1,6 @@
+Rook
+- move offsets: [[0, 1], [1, 0], [0, -1], [-1, 0]]
+- moves:
+    - can move any number of squares in one of its offset directions
+    - cannot move over another piece to move
+

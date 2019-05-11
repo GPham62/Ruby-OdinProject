@@ -1,5 +1,6 @@
-require './BoardGame.rb'
-require './Player.rb'
+
+# require './BoardGame.rb'
+# require './Player.rb'
 
 class Menu
   def initialize(player1, player2)
@@ -42,7 +43,6 @@ class Menu
     players.each do |player|
       @winPatterns.each do |winPattern|
         winPattern = winPattern.sort
-        puts "#{player.name}'s win pattern: #{winPattern}"
         return player.name if player.isWin?(winPattern)
       end
     end

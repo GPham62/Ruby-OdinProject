@@ -1,3 +1,4 @@
+puts Dir.pwd
 class BoardGame
   attr_accessor :positions
 

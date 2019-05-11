@@ -1,0 +1,44 @@
+- get the user's input
+  - input validation
+
+    -valid
+      - must be length 2
+      - input[0] must match /[a-h]/
+      - input[1] must match /[1-8]/
+
+    - invalid
+      - raise runtime error with some message
+      - rescue and print the message
+      - recurse through the method again
+
+  - Check the board at the valid coordinates
+
+      - If a chess piece exists at that position
+        - Generate the legal movements for that chess piece
+          - Get the coord offsets from the chess piece
+          - Generate the coordinates of the legal movements
+            - This method needs to handle looking in the chosen space to check that there isn't any other chess piece already there (except knight)
+            - If there is a chess piece there, the move generator needs to move to the next offset in the array
+          - duplicate the board object and set the state at all the available moves to 'X'
+          - convert the available move coordinates back to rank and file format
+          - display the duplicated board to the user
+          - display the converted available moves to the user
+          - prompt the user to choose from these coordinates
+
+      - If no chess piece exists at that position
+        - raise runtime error with some message
+        - rescue and print the message
+        - recurse through the method again
+
+  - After a chess piece has been chosen, and its available moves have been calculated and displayed
+    - The user should select a move from the movelist
+
+      - If the user's response matches a move on the movelist
+        - get the index of the move they chose from the converted array, and use that index
+          to get the array formatted coordinates from the available moves
+          
+      - recurse if no matches
+
+  - update game state with chosen piece and coordinates
+      -   change the state of the chosen space to reflect the movement
+      -   change the state of the old space to nil to reflect its emptiness

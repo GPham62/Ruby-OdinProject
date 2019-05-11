@@ -1,0 +1,9 @@
+Welcome to chess! In this version of the game, 2 human players will play against each other.
+Pick which player will be the white pieces, and which player will be the black pieces.
+The white player will go first. On your turn, you can move a chess piece, save and quit, or quit.
+If you elect to move a piece, you will be prompted to choose a chess piece to move. Pick a piece 
+to move by typing the coordinates and pressing enter. For example, type a2 and then press Enter. 
+If that chess piece is allowed to move this turn, you will be prompted to pick from one of its 
+available moves. Enter the move in the same way you would to select a piece.
+
+The game can be won by checkmating your opponent's king. Good luck!

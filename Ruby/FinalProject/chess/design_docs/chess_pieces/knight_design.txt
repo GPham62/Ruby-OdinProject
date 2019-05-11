@@ -1,0 +1,6 @@
+Knight
+- completely unique move offsets:
+    - [[1, 2], [2, 1], [2, -1], [1, -2], [-1, -2], [-2, -1], [-2, 1], [-1, 2]]
+- move:
+    - can move to one space in any of its offset directions
+    - can leap over pieces to move

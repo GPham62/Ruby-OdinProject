@@ -1,2 +1,1 @@
-class Node
-  
+puts "\u2600".encode('utf-8')

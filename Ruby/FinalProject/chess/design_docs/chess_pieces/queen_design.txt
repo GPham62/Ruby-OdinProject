@@ -1,0 +1,5 @@
+Queen
+- move offsets: [[0, 1], [1, 1], [1, 0], [1, -1], [0, -1], [-1, -1], [-1, 0], [-1, 1]]
+- moves:
+    - can move any number of spaces in any offset direction
+    - cannot leap over another piece

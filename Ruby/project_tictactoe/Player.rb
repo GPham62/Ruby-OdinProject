@@ -21,7 +21,6 @@ class Player
   end
 
   def isWin?(winPattern)
-    puts "history: #{@history}"
     winPattern && (winPattern - @history).empty?
   end
 end

@@ -1,0 +1,16 @@
+Pawn
+- white move offsets: [[0, 1], [1, 1], [-1, 1]]
+- black move offsets: [[0, -1], [1, -1], [-1, -1]
+  - diagonal offsets are for capture only, including en passant capture
+- moves:
+    - needs a boolean value to track if a pawn has moved yet
+    - can move in its vertical offset direction up to two spaces, if that pawn has not moved yet
+    - normally moves one space in its vertical offset direction
+    - en passant capture:
+        - when a pawn makes a two-step advance from its starting position and there is an opponent's 
+        pawn on a square next to the destination square on an adjacent file, then the opponent's pawn 
+        can capture it en passant ("in passing"), moving to the square the pawn passed over
+        - this can only be done on the very next turn, otherwise the right to do so is forfeited
+    - promotion:
+        - when a pawn advances to eigth rank, it can be promoted to the players choice of queen, rook, 
+        bishop, or knight

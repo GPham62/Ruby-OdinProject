@@ -1,8 +1,10 @@
   module Enumerable
     def my_each
+      return self.to_enum unless block_given?
       for i in self
         yield(i)
       end
+      self
     end
 
     def my_each_with_index
@@ -25,7 +27,7 @@
     def my_all?
       self.my_each do |e|
         unless yield(e)
-          false
+          return false
         end
       end
       true
@@ -34,7 +36,7 @@
     def my_any?
       self.my_each do |e|
         if yield(e)
-          true
+          return true
         end
       end
       false
