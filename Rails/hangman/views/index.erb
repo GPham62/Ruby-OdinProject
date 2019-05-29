@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #message {
+      color: <%= message[1] %>;
+    }
+  </style>
+  <title>Hang Man Mastered</title>
+</head>
+<body>
+  <h1>Welcome to hang man!</h1>
+  <h2>Today secret word is: <%= progress %></h2>
+  <h2>Incorrect letters: <%= incorrect_letters %></h2>
+  <h2>Chance left: <%= chance %></h2>
+  <form action="/" method="post">
+    <input type="text" name="guess_letter" placeholder="Guess a letter" maxlength="1">
+    <input type="submit" value="Guess!">
+  </form>
+  <p id="message"><%= message[0] %></p>
+</body>
+</html>

@@ -13,6 +13,7 @@ class Game
   end
 
   def start_game
+    print @computer.code
     print_intro
     puts "Our secret code have #{@computer.code.length} characters"
     until is_over?
